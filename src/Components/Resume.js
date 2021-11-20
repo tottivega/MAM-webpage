@@ -15,18 +15,6 @@ class Resume extends Component {
     if (!this.props.data) return null;
 
     const skillmessage = this.props.data.skillmessage;
-    const education = this.props.data.education.map(function (education) {
-      return (
-        <div key={education.school}>
-          <h3>{education.school}</h3>
-          <p className="info">
-            {education.degree} <span>&bull;</span>
-            <em className="date">{education.graduated}</em>
-          </p>
-          <p>{education.description}</p>
-        </div>
-      );
-    });
 
     const work = this.props.data.work.map(function (work) {
       return (
@@ -56,22 +44,10 @@ class Resume extends Component {
 
     return (
       <section id="resume">
-        <Slide left duration={1300}>
-          <div className="row education">
-            <div className="three columns header-col">
-              <h1>
-                <span>Education</span>
-              </h1>
-            </div>
-
-            <div className="nine columns main-col">
-              <div className="row item">
-                <div className="twelve columns">{education}</div>
-              </div>
-            </div>
-          </div>
-        </Slide>
-
+        {artists.map((artist) => (
+          <Artist {...artist} />
+        ))}
+        {/* 
         <Slide left duration={1300}>
           <div className="row work">
             <div className="three columns header-col">
@@ -100,10 +76,93 @@ class Resume extends Component {
               </div>
             </div>
           </div>
-        </Slide>
+        </Slide> */}
       </section>
     );
   }
 }
 
+const artists = [
+  {
+    name: "Paco Calderon",
+    img: "https://i2.wp.com/blog.claroshop.com/wp-content/uploads/2021/07/e049b5042076ebd6c5f135b6821efa97.jpg?resize=655%2C1024&ssl=1",
+    awards: [{ award: "Campeon Champeons league", date: "Abril 2021" }],
+    bio: "Paco likes tortas de chorihuevo and walks in the park",
+    interview: "I like art that is why I am in",
+  },
+  {
+    name: "Boris Vinsky",
+    img: "https://i2.wp.com/blog.claroshop.com/wp-content/uploads/2021/07/e049b5042076ebd6c5f135b6821efa97.jpg?resize=655%2C1024&ssl=1",
+    awards: [{ award: "Campeon Champeons league", date: "Abril 2021" }],
+    bio: "Paco likes tortas de chorihuevo and walks in the park",
+    interview: "I like art that is why I am in",
+  },
+  {
+    name: "Macias IDUNNO",
+    img: "https://i2.wp.com/blog.claroshop.com/wp-content/uploads/2021/07/e049b5042076ebd6c5f135b6821efa97.jpg?resize=655%2C1024&ssl=1",
+    awards: [{ award: "Campeon Champeons league", date: "Abril 2021" }],
+    bio: "Paco likes tortas de chorihuevo and walks in the park",
+    interview: "I like art that is why I am in",
+  },
+  {
+    name: "Glenda IDUNNO",
+    img: "https://i2.wp.com/blog.claroshop.com/wp-content/uploads/2021/07/e049b5042076ebd6c5f135b6821efa97.jpg?resize=655%2C1024&ssl=1",
+    awards: [{ award: "Campeon Champeons league", date: "Abril 2021" }],
+    bio: "Paco likes tortas de chorihuevo and walks in the park",
+    interview: "I like art that is why I am in",
+  },
+  {
+    name: "Cris Altamirano",
+    img: "https://i2.wp.com/blog.claroshop.com/wp-content/uploads/2021/07/e049b5042076ebd6c5f135b6821efa97.jpg?resize=655%2C1024&ssl=1",
+    awards: [{ award: "Campeon Champeons league", date: "Abril 2021" }],
+    bio: "Paco likes tortas de chorihuevo and walks in the park",
+    interview: "I like art that is why I am in",
+  },
+];
+
 export default Resume;
+
+const Artist = ({ name, img, awards, bio, interview }) => {
+  return (
+    <Slide left duration={1300}>
+      <div className="row education">
+        <div className="three columns header-col">
+          <h1>
+            <span>{name}</span>
+          </h1>
+          <img src={img} />
+        </div>
+
+        <div className="nine columns main-col">
+          <div className="row item">
+            <div className="twelve columns">
+              <div>
+                <h3>Biography</h3>
+                <p className="info">
+                  {awards.map(({ award, date }) => {
+                    return (
+                      <>
+                        {award} <span>&bull;</span>
+                        <em className="date">{date}</em>
+                      </>
+                    );
+                  })}
+                </p>
+                <p>{bio}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="row item">
+            <div className="twelve columns">
+              <div>
+                <h3>Thoughts on the project</h3>
+                <p>{interview}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Slide>
+  );
+};

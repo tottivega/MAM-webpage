@@ -25,13 +25,35 @@ class Portfolio extends Component {
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
-              <h1>Check Out Some of My Works.</h1>
+              <h1>New to crypto? Don't know how to participate?</h1>
 
               <div
                 id="portfolio-wrapper"
                 className="bgrid-quarters s-bgrid-thirds cf"
               >
-                {projects}
+                <div className="columns portfolio-item">
+                  <div className="item-wrap">
+                    <Zmage
+                      alt="Create a Cryptowallet"
+                      src="http://la-candelaria.com/wp-content/uploads/2015/05/tutorial.jpg"
+                    />
+                    <div style={{ textAlign: "center" }}>
+                      Create a Cryptowallet
+                    </div>
+                  </div>
+                </div>
+
+                <div className="columns portfolio-item">
+                  <div className="item-wrap">
+                    <Zmage
+                      alt="Buy an NFT in Opensea"
+                      src="https://www.finder.com/niche-builder/611f92c51f96f.png"
+                    />
+                    <div style={{ textAlign: "center" }}>
+                      Buy an NFT in Opensea
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

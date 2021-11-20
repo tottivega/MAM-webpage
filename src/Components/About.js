@@ -69,10 +69,10 @@ class About extends Component {
                 around cutting edge blockchain techonlogy. Drawing from its own
                 mysterious nature, the movement finds itself in constant
                 evolution. MAM looks to present the absurdism and inexplicable
-                nature of life through multisensorial experiences el absurdismo
-                y misterio de la Vida. MAM also looks to create new spaces for
-                artists,promoting their ideological autonomy and presents the
-                spectator as a relay of conversation and change.
+                nature of life through multisensorial experiences. MAM also
+                looks to create new spaces for artists,promoting their
+                ideological autonomy and presents the spectator as a relay of
+                conversation and change.
               </p>
               <h2>Contact Details</h2>
               <div style={{ display: "flex" }}>{networks}</div>

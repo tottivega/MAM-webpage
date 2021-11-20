@@ -3,6 +3,7 @@
 - [] Tutorial navigation (maybe a modal)
 - [] Tutorial instructions
 - [] Revision with team
+- [] Scrollbar mas chida
 
 ### 2. Run the project
 

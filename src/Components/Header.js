@@ -19,15 +19,7 @@ class Header extends Component {
 
         <div className="row banner">
           <div className="banner-text">
-            <Fade top>
-              <h1
-                className="responsive-headline"
-                style={{ color: "black", marginTop: 48 }}
-              >
-                Mexican Art Machine
-              </h1>
-            </Fade>
-            <div style={{ marginTop: -120 }}>
+            <div>
               <img
                 src="https://i.imgur.com/iiMBfzg.png"
                 style={{ objectFit: "cover", objectPosition: "20% 10%" }}

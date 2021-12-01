@@ -45,7 +45,6 @@ class App extends Component {
     return (
       <div className="App">
         <Header data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} />
       </div>
     );
   }

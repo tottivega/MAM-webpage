@@ -13,66 +13,26 @@ class Header extends Component {
     const description = this.props.data.description;
 
     return (
-      <header id="home">
+      <header id="">
         {/* <ParticlesBg type="circle" bg={true} /> */}
         {/* Go back to first commit and fix navigation */}
-        <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-            Show navigation
-          </a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">
-            Hide navigation
-          </a>
-
-          <ul id="nav" className="nav">
-            <li className="current">
-              <a className="smoothscroll" href="#home">
-                Home
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#about">
-                About
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#loteria">
-                Loteria
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#resume">
-                Artists
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#portfolio">
-                Works
-              </a>
-            </li>
-
-            {/* <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
-              </a>
-            </li> */}
-          </ul>
-
-          <EthereumIntegration />
-        </nav>
 
         <div className="row banner">
           <div className="banner-text">
-            <Fade bottom>
-              <h1 className="responsive-headline">Mexican Art Machine</h1>
+            <Fade top>
+              <h1
+                className="responsive-headline"
+                style={{ color: "black", marginTop: 48 }}
+              >
+                Mexican Art Machine
+              </h1>
             </Fade>
-            <Fade bottom duration={1200}>
-              <h3>Segun yo aqui el logo</h3>
-            </Fade>
+            <div style={{ marginTop: -120 }}>
+              <img
+                src="https://i.imgur.com/iiMBfzg.png"
+                style={{ objectFit: "cover", objectPosition: "20% 10%" }}
+              />
+            </div>
             <hr />
             {/* <Fade bottom duration={2000}>
               <ul className="social">

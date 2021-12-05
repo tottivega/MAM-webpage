@@ -148,7 +148,7 @@ const EthereumIntegration = () => {
 
   return (
     <div>
-      Account: {account}, Chain: {getChain(chainId)}
+      Account: {account || "unknown"}, Chain: {getChain(chainId)}
     </div>
   );
 };

@@ -4,6 +4,12 @@
 - [] Tutorial instructions
 - [] Revision with team
 - [] Scrollbar mas chida
+- [] Discord Font awesome
+- [] Responsiveness
+- [] Social links
+- [] Styles on loteria
+- [] Populate collection urls
+- [] Populate bios
 
 ### 2. Run the project
 

@@ -17,8 +17,20 @@ const supportedNetworks = [
   },
 ];
 
-export default function Networks() {
+export default function Networks({ whitemode = false }) {
   console.log(supportedNetworks);
+
+  if (whitemode) {
+    return supportedNetworks.map(function (network) {
+      return (
+        <div key={network.name} style={{ marginRight: 42, fontSize: 46 }}>
+          <a href={network.url}>
+            <i className={network.className}></i>
+          </a>
+        </div>
+      );
+    });
+  }
   return (
     <ul className="social-links">
       {supportedNetworks.map(function (network) {
@@ -32,12 +44,4 @@ export default function Networks() {
       })}
     </ul>
   );
-
-  //   return (
-  //     <div key={network.name} style={{ marginRight: 42, fontSize: 46 }}>
-  //       <a href={network.url}>
-  //         <i className={network.className}></i>
-  //       </a>
-  //     </div>
-  //   );
 }

@@ -2,6 +2,7 @@
 
 - [] Tutorial navigation (maybe a modal)
 - [] Tutorial instructions
+- [] Tutorial step how to see your NFTs in your wallet
 - [] Revision with team
 - [] Scrollbar mas chida
 - [] Discord Font awesome
@@ -10,6 +11,7 @@
 - [] Styles on loteria
 - [] Populate collection urls
 - [] Populate bios
+- [] Mint MAM token
 
 ### 2. Run the project
 

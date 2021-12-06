@@ -29,7 +29,7 @@ class About extends Component {
               </p>
               <h2>Contact Details</h2>
               <div style={{ display: "flex" }}>
-                <Networks />
+                <Networks whitemode />
               </div>
             </div>
           </div>

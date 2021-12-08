@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Zmage from "react-zmage";
 import Fade from "react-reveal";
 
-class Portfolio extends Component {
+class Tutorials extends Component {
   render() {
     return (
       <section id="portfolio">
@@ -47,4 +47,4 @@ class Portfolio extends Component {
   }
 }
 
-export default Portfolio;
+export default Tutorials;

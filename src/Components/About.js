@@ -23,7 +23,7 @@ class About extends Component {
                 mysterious nature, the movement finds itself in constant
                 evolution. MAM looks to present the absurdism and inexplicable
                 nature of life through multisensorial experiences. MAM also
-                looks to create new spaces for artists,promoting their
+                looks to create new spaces for artists, promoting their
                 ideological autonomy and presents the spectator as a relay of
                 conversation and change.
               </p>

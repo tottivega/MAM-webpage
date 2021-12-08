@@ -1,20 +1,20 @@
 import React from "react";
 const supportedNetworks = [
   {
-    name: "twitter",
-    url: "https://twitter.com/MAM_nfts",
-    className: "fa fa-twitter",
-  },
-  {
-    name: "discord",
-    url: "https://discord.gg/zws6EA9V9f",
-    className: "fa fa-discord",
-  },
-  {
     name: "instagram",
     url: "http://instagram.com/tbaker_x",
     className: "fa fa-instagram",
   },
+  {
+    name: "twitter",
+    url: "https://twitter.com/MAM_nfts",
+    className: "fa fa-twitter",
+  },
+  // {
+  //   name: "discord",
+  //   url: "https://discord.gg/zws6EA9V9f",
+  //   className: "fa fa-discord",
+  // },
 ];
 
 export default function Networks({ whitemode = false }) {

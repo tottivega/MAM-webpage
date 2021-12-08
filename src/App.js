@@ -5,7 +5,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
-import Portfolio from "./Components/Portfolio";
+import Tutorials from "./Components/Tutorials";
 import Loteria from "./Components/Loteria";
 
 class App extends Component {
@@ -22,9 +22,9 @@ class App extends Component {
       <div className="App">
         <Header />
         <About />
-        <Loteria />
+        {false && <Loteria />}
         <Resume />
-        <Portfolio />
+        {false && <Tutorials />}
         {/* <Contact /> */}
         <Footer />
       </div>

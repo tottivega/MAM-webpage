@@ -28,9 +28,9 @@ class Header extends Component {
             />
             <h2
               className="responsive-headline"
-              style={{ position: "absolute", bottom: 48 }}
+              style={{ position: "absolute", bottom: 48, textAlign: "center" }}
             >
-              Que pedo mi pinche Jose aqui hay que poner algo{" "}
+              Presenting "The Sounds of Mexico"
             </h2>
           </div>
         </Fade>

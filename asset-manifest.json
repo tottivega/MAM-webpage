@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MAM-webpage/static/css/main.bab0b925.chunk.css",
-    "main.js": "/MAM-webpage/static/js/main.ab3ba5cb.chunk.js",
-    "main.js.map": "/MAM-webpage/static/js/main.ab3ba5cb.chunk.js.map",
+    "main.js": "/MAM-webpage/static/js/main.97a84c71.chunk.js",
+    "main.js.map": "/MAM-webpage/static/js/main.97a84c71.chunk.js.map",
     "runtime-main.js": "/MAM-webpage/static/js/runtime-main.87c3c7c4.js",
     "runtime-main.js.map": "/MAM-webpage/static/js/runtime-main.87c3c7c4.js.map",
     "static/js/2.908ff090.chunk.js": "/MAM-webpage/static/js/2.908ff090.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.87c3c7c4.js",
     "static/js/2.908ff090.chunk.js",
     "static/css/main.bab0b925.chunk.css",
-    "static/js/main.ab3ba5cb.chunk.js"
+    "static/js/main.97a84c71.chunk.js"
   ]
 }

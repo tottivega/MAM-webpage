@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
-import Networks from "./Networks";
 class About extends Component {
   render() {
     return (
@@ -15,22 +14,22 @@ class About extends Component {
               />
             </div>
             <div className="nine columns main-col">
-              <h2>About Us</h2>
+              <h2>We are here to revolutionize the art ecosystem</h2>
 
               <p>
                 MAM is a cultural and technological movement that revolves
-                around cutting edge blockchain techonlogy. Drawing from its own
-                mysterious nature, the movement finds itself in constant
+                around cutting edge blockchain technology. Drawing from its own
+                mysterious essence, the movement finds itself in constant
                 evolution. MAM looks to present the absurdism and inexplicable
-                nature of life through multisensorial experiences. MAM also
-                looks to create new spaces for artists, promoting their
+                nature of life through multisensorial experiences. <br /> MAM
+                also looks to create new spaces for artists, promoting their
                 ideological autonomy and presents the spectator as a relay of
                 conversation and change.
               </p>
-              <h2>Contact Details</h2>
+              {/* <h2>Contact Details</h2>
               <div style={{ display: "flex" }}>
                 <Networks whitemode />
-              </div>
+              </div> */}
             </div>
           </div>
         </Fade>

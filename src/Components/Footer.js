@@ -5,7 +5,7 @@ import Networks from "./Networks";
 class Footer extends Component {
   render() {
     return (
-      <footer>
+      <footer style={{ backgroundColor: "#000524" }}>
         <div className="row">
           <Fade bottom>
             <div className="twelve columns">

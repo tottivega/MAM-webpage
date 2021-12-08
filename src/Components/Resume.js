@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component, useState, useEffect } from "react";
 import Slide from "react-reveal";
 
 class Resume extends Component {
@@ -14,30 +14,45 @@ class Resume extends Component {
   render() {
     return (
       <section id="resume">
+        <h1
+          style={{
+            width: "100%",
+            textAlign: "center",
+            marginBottom: 96,
+          }}
+        >
+          Countdown to collection reveal <Countdown />
+        </h1>
+
+        <hr />
         <Slide top duration={1300}>
           <h1
             style={{
               width: "100%",
               textAlign: "center",
-              fontSize: 48,
+              fontSize: 24,
               marginBottom: 24,
               lineHeight: 1,
             }}
+            className="meet-artists-responsive"
           >
-            Meet the artists for "the Sounds of Mexico"
+            Meet the artists
           </h1>
           <h1
             style={{
               width: "100%",
               textAlign: "center",
+              fontSize: 48,
               marginBottom: 96,
+              lineHeight: 1,
             }}
+            className="collection-name-responsive"
           >
-            Countdown to collection reveal: <Countdown />
+            the Sounds of Mexico
           </h1>
         </Slide>
-        {artists.map((artist) => (
-          <Artist {...artist} />
+        {artists.map((artist, i) => (
+          <Artist {...artist} key={i} />
         ))}
         {/* 
         <Slide left duration={1300}>
@@ -97,10 +112,10 @@ const artists = [
       },
       {
         award:
-          "Book writer and illustrator, has hosted radio shows over the years",
+          "Book writer and illustrator, has also hosted radio shows over the years",
       },
     ],
-    bio: "If you live in Mexico, you have seen Paco's comics numerous times, an iconic legend of the Reforma newspaper is here to make his stand on the NFT world, perhaps even after this, he will become Mexico's next president. Decorated and successful, decided to join Mexican Art Machine in the endeavor to show the crypto gang what actual art is meant to be.",
+    bio: "If you live in Mexico, you have seen Paco's comics numerous times, an iconic legend of the Reforma newspaper. Decorated and successful, he decided to join Mexican Art Machine in the endeavor to show the crypto gang what actual art looks like. Paco is here to make his stand on the NFT world, and perhaps even after this, he will become Mexico's future president.",
   },
   {
     name: "Boris Viskin",
@@ -110,17 +125,22 @@ const artists = [
       { award: "Academia de San Carlos" },
       {
         award:
-          "Mexico City's Museum of Modern Art dedicated an exposition to Boris (La belleza llegara despues)",
+          "Mexico City's Museum of Modern Art dedicated an exposition to Boris (La belleza llegara después)",
       },
       { award: "Founding member of Zona and Acapulco 62" },
     ],
-    bio: "Born in Mexico, traversed his young years on Israel until he landed in Florence, where he would begin a monumental career in art, navigates what he describes as his uprooted being through a coalition of the vulnerable and fragile with the stern and strong. 'I have always felt uncomfortable and a distrust towards words, which is why since a very young age the world of images has shown a solid and secure space to me, a medium through which I have expressed my multiple and contradicting personalities. Sometimes I feel like an intuitive caveman, sometimes a conceptual artist'. Leading the charge on Mexico's art landscape, Boris comes to the NFT world to revolutionize how people value blockchain art. ",
+    bio: 'Born in Mexico, traversed his young years on Israel until he landed in Florence, where he would begin a monumental career in art. Boris navigates what he describes as his "uprooted being" through a coalition of the vulnerable and fragile with the stern and strong. "I have always felt uncomfortable and a distrust towards words, which is why since a very young age the world of images has shown a solid and secure space to me, a medium through which I have expressed my multiple and contradicting personalities. Sometimes I feel like an intuitive caveman, sometimes a conceptual artist". Leading the charge on Mexico`s art landscape, Boris comes to the NFT world to revolutionize how people value blockchain art.',
   },
   {
     name: "Manuel Macias",
     img: "https://i.imgur.com/0UhadEu.jpg",
-    awards: [{ award: "Campeon Champeons league", date: "Abril 2021" }],
-    bio: "A creature of the deep forest and the first crypto libertarian in Zitacuaro, Michoacan, Macias has an unparallel eye for illustrating ",
+    awards: [
+      { award: "Master Illustrator" },
+      { award: "Professional Birdwatcher" },
+      { award: "Taco Sommelier" },
+      { award: "Concept Creator Sensei" },
+    ],
+    bio: "A creature of the deep forest and the first crypto libertarian in Michoacan. Macias has an unparallel eye for drawing and a keen sense of the upcoming future. There is a very real possibility that the rumors are true and Macias is the real Satoshi, we can neither confirm nor deny said information. ",
   },
   {
     name: "Glenda Torrado",
@@ -133,11 +153,11 @@ const artists = [
       { award: "Co-creator of Corona Sound Machine" },
       { award: "Participated in East London University's '#4.5A&SM'" },
     ],
-    bio: "A daring colombian found her place in Mexico City, pure artistic talent, governing all landscapes from painting, sculptures, music to digital illustrations. Watch glenda as she becomes an iconic artist in the brewing digital revolution.",
+    bio: "A daring colombian who found her place in the heart Mexico City. She is pure artistic talent, governing all landscapes from painting, sculptures, music to digital illustrations. You will not want to be caught watching from the sideline as Glenda reaches for the moon.",
   },
   {
     name: "Cris Altamirano",
-    img: "https://i2.wp.com/blog.claroshop.com/wp-content/uploads/2021/07/e049b5042076ebd6c5f135b6821efa97.jpg?resize=655%2C1024&ssl=1",
+    img: "https://i.imgur.com/qnTpaS0.jpg",
     awards: [
       {
         award:
@@ -148,7 +168,7 @@ const artists = [
           "Studied a variety of at the Ars Vita Studio: Comic and Manga, Traditional Ink, Digital Drawing",
       },
     ],
-    bio: "A young upcoming artist, with a powerful governance over all digital tools at his disposal. Cris, notorious for being an early investor in GME, and proud member of the Ape Yacht Club is excited to bring his unique style, has some words to say about the project 'MAMe los memes'.",
+    bio: "A young upcoming artist, with a powerful mastery of the arcane art of Manga, an absolute force to be reckoned with. Cris, notorious for being an early investor in Gamestop, and proud member of the Ape Yacht Club is excited to bring his unique style to the Sounds of Mexico collection.",
   },
 ];
 
@@ -156,74 +176,141 @@ export default Resume;
 
 const Artist = ({ name, img, awards, bio }) => {
   return (
-    <>
-      <Slide left duration={1300}>
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1>
-              <span>{name}</span>
-            </h1>
-            <img src={img} alt={name} />
-          </div>
+    <Slide left duration={1300}>
+      <div className="row education">
+        <div className="three columns header-col">
+          <h1>
+            <span>{name}</span>
+          </h1>
+          <img src={img} alt={name} />
+        </div>
 
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">
-                <div>
-                  <h3>Biography</h3>
-                  <p className="info">
-                    {awards.map(({ award, date }) => {
-                      return (
-                        <>
-                          {award} <span>&bull;</span>
-                          {date && <em className="date">{date}</em>}
-                        </>
-                      );
-                    })}
-                  </p>
-                  <p>{bio}</p>
-                </div>
+        <div className="nine columns main-col">
+          <div className="row item">
+            <div className="twelve columns">
+              <div>
+                <h3>Biography</h3>
+                <p className="info">
+                  {awards.map(({ award, date }, i) => {
+                    return (
+                      <React.Fragment key={i}>
+                        <span>&bull;</span> {award}
+                        {date && <em className="date">{date}</em>}
+                      </React.Fragment>
+                    );
+                  })}
+                </p>
+                <p>{bio}</p>
               </div>
             </div>
           </div>
         </div>
-      </Slide>
-    </>
+      </div>
+    </Slide>
   );
 };
 
 function Countdown() {
-  const [countdown, setCountdown] = useState("");
-  var end = new Date("12/11/2021 10:00 PM");
+  const [
+    {
+      days,
+      daysText,
+      hours,
+      hoursText,
+      minutes,
+      minutesText,
+      seconds,
+      secondsText,
+    },
+    setCountdown,
+  ] = useState({});
 
-  var _second = 1000;
-  var _minute = _second * 60;
-  var _hour = _minute * 60;
-  var _day = _hour * 24;
-  var timer;
+  useEffect(() => {
+    const showRemaining = () => {
+      const end = new Date("12/11/2021 10:00 PM");
+      const _second = 1000;
+      const _minute = _second * 60;
+      const _hour = _minute * 60;
+      const _day = _hour * 24;
+      const now = new Date();
+      const distance = end - now;
 
-  function showRemaining() {
-    var now = new Date();
-    var distance = end - now;
-    if (distance < 0) {
-      clearInterval(timer);
-      document.getElementById("countdown").innerHTML = "EXPIRED!";
+      const days = Math.floor(distance / _day);
+      const hours = Math.floor((distance % _day) / _hour);
+      const minutes = Math.floor((distance % _hour) / _minute);
+      const seconds = Math.floor((distance % _minute) / _second);
 
-      return;
-    }
-    var days = Math.floor(distance / _day);
-    var hours = Math.floor((distance % _day) / _hour);
-    var minutes = Math.floor((distance % _hour) / _minute);
-    var seconds = Math.floor((distance % _minute) / _second);
+      const daysText = "day" + (days === 1 ? " " : "s ");
+      const hoursText = "hr" + (hours === 1 ? " " : "s ");
+      const minutesText = "min" + (minutes === 1 ? " " : "s ");
+      const secondsText = "sec" + (seconds === 1 ? " " : "s ");
+      setCountdown({
+        days,
+        daysText,
+        hours,
+        hoursText,
+        minutes,
+        minutesText,
+        seconds,
+        secondsText,
+      });
+    };
 
-    let countdown = days + "day" + (days === 1 ? " " : "s ");
-    countdown += hours + "hr" + (hours === 1 ? " " : "s ");
-    countdown += minutes + "min" + (minutes === 1 ? " " : "s ");
-    countdown += seconds + "sec" + (seconds === 1 ? " " : "s ");
-    setCountdown(countdown);
-  }
+    const interval = setInterval(showRemaining, 1000);
 
-  setInterval(showRemaining, 1000);
+    return () => window.clearInterval(interval);
+  }, []);
 
-  return countdown;
+  return (
+    <div
+      style={{
+        display: "flex",
+        marginTop: 24,
+        justifyContent: "center",
+        flexWrap: "wrap",
+      }}
+    >
+      <div
+        style={{ display: "flex", justifyContent: "center", marginRight: 24 }}
+      >
+        <div
+          style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}
+          key={`days${days}`}
+        >
+          {days}
+        </div>
+        {daysText}
+      </div>
+      <div
+        style={{ display: "flex", justifyContent: "center", marginRight: 24 }}
+      >
+        <div
+          style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}
+          key={`hours${hours}`}
+        >
+          {hours}
+        </div>
+        {hoursText}
+      </div>
+      <div className="flex-break-responsive" />
+      <div
+        style={{ display: "flex", justifyContent: "center", marginRight: 24 }}
+        key={`minutes${minutes}`}
+      >
+        <div style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}>
+          {minutes}
+        </div>
+        {minutesText}
+      </div>
+      <div
+        style={{ display: "flex", justifyContent: "center" }}
+        key={`seconds${seconds}`}
+      >
+        <div style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}>
+          {seconds}
+        </div>
+        {secondsText}
+      </div>
+    </div>
+  );
 }

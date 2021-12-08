@@ -274,7 +274,7 @@ function Countdown() {
         style={{ display: "flex", justifyContent: "center", marginRight: 24 }}
       >
         <div
-          style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}
+          style={{ color: "#053483", fontSize: 48, marginRight: 12 }}
           key={`days${days}`}
         >
           {days}
@@ -285,7 +285,7 @@ function Countdown() {
         style={{ display: "flex", justifyContent: "center", marginRight: 24 }}
       >
         <div
-          style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}
+          style={{ color: "#053483", fontSize: 48, marginRight: 12 }}
           key={`hours${hours}`}
         >
           {hours}
@@ -297,7 +297,7 @@ function Countdown() {
         style={{ display: "flex", justifyContent: "center", marginRight: 24 }}
         key={`minutes${minutes}`}
       >
-        <div style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}>
+        <div style={{ color: "#053483", fontSize: 48, marginRight: 12 }}>
           {minutes}
         </div>
         {minutesText}
@@ -306,7 +306,7 @@ function Countdown() {
         style={{ display: "flex", justifyContent: "center" }}
         key={`seconds${seconds}`}
       >
-        <div style={{ color: "#b076ad", fontSize: 48, marginRight: 12 }}>
+        <div style={{ color: "#053483", fontSize: 48, marginRight: 12 }}>
           {seconds}
         </div>
         {secondsText}

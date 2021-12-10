@@ -29,6 +29,8 @@ const nftIds = ["1494", "1495", "1496", "1497", "1498", "1499", "1500"];
 
 const contractAddress = "0xb4b55cb5c7d3c59c69dcaac83ed067bb3abfa2d3";
 
+// Collection https://objkt.com/collection/KT19A7Y3vMDQCLNBMdT97f8jcw3yvg5RY6o8
+// API docs https://data.objkt.com/docs/
 const LoteriaGrid = () => {
   const [nftData, setNftData] = useState();
 

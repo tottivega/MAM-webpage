@@ -46,11 +46,16 @@ body {
   height: 100%;
 }
 
+.quote-container {
+  width: 60%;
+}
+
 .quote-text {
   font-family: "TropicalAsian";
   font-size: 74px;
   margin-top: 24px;
   color: black;
+  line-height: 0.7;
 }
 
 .quote-author {
@@ -88,11 +93,14 @@ body {
     font-size: 36px !important;
   }
 
+  .quote-container {
+    width: 100%;
+  }
+
   .quote-text {
     font-size: 52px;
     padding-right: 12px;
     padding-left: 12px;
-    line-height: 0.7;
   }
 
   .quote-author {

@@ -328,23 +328,31 @@ function Reviews() {
         alignItems: "center",
       }}
     >
-      <div>
+      <div className="quote-container">
         <div className="quote-text">
           "The most anticipated drop of the century"
         </div>
         <div className="quote-author">- Elong Musk</div>
       </div>
-      <div>
+      <div className="quote-container">
         <div className="quote-text">
           "These NFTs will ripple the fabric of spacetime"
         </div>
         <div className="quote-author">- Walbert Einstein</div>
       </div>
-      <div>
+      <div className="quote-container">
         <div className="quote-text">
           “There's nothing wrong with having an NFT as a friend.”
         </div>
         <div className="quote-author">- Bob Rozz</div>
+      </div>
+      <div className="quote-container">
+        <div className="quote-text">
+          “The crypto ecosystem benefits immensely from this drop, getting us
+          closer to the decline of the nation state and into the rise of the
+          sovereign individual.”
+        </div>
+        <div className="quote-author">- Nayip Bukele</div>
       </div>
     </div>
   );

@@ -98,14 +98,15 @@ body {
   }
 
   .quote-text {
-    font-size: 52px;
+    font-size: 36px;
     padding-right: 12px;
     padding-left: 12px;
   }
 
   .quote-author {
-    font-size: 24px;
+    font-size: 16px;
     padding-right: 12px;
+    margin-top: 0;
   }
 }
 

@@ -4,6 +4,8 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./fonts/itc-avant-garde-gothic-lt-extra-light.ttf";
+import "./fonts/JMH Typewriter.ttf";
+import "./fonts/TropicalAsianDemoRegular-11V0.ttf";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

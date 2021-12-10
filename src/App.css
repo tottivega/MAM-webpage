@@ -5,6 +5,20 @@
   font-weight: 2000;
 }
 
+@font-face {
+  font-family: "JMHTypeWriter";
+  src: local("JMHTypeWriter"),
+    url("./fonts/JMH Typewriter.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "TropicalAsian";
+  src: local("TropicalAsian"),
+    url("./fonts/TropicalAsianDemoRegular-11V0.ttf") format("truetype");
+  font-weight: bold;
+}
+
 body {
   background-color: #000524;
 }
@@ -12,14 +26,14 @@ body {
 .title-responsive-font {
   font-size: 90px;
   bottom: 24px;
-  font-family: "AvantGardeGothic";
+  font-family: "JMHTypeWriter";
   /* letter-spacing: 2px; */
   text-align: center;
 }
 
 .subtitle-responsive-font {
   bottom: 48px;
-  font-family: "Chrobot";
+  font-family: "JMHTypeWriter";
 }
 
 .logo-container-responsive-size {
@@ -30,6 +44,20 @@ body {
 
 .logo-responsive-size {
   height: 100%;
+}
+
+.quote-text {
+  font-family: "TropicalAsian";
+  font-size: 74px;
+  margin-top: 24px;
+  color: black;
+}
+
+.quote-author {
+  font-family: "JMHTypeWriter";
+  font-size: 32px;
+  margin-top: 24px;
+  text-align: right;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -58,6 +86,18 @@ body {
 
   .collection-name-responsive {
     font-size: 36px !important;
+  }
+
+  .quote-text {
+    font-size: 52px;
+    padding-right: 12px;
+    padding-left: 12px;
+    line-height: 0.7;
+  }
+
+  .quote-author {
+    font-size: 24px;
+    padding-right: 12px;
   }
 }
 

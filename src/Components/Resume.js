@@ -24,7 +24,10 @@ class Resume extends Component {
           Countdown to collection reveal <Countdown />
         </h1>
 
-        <hr />
+        <Reviews />
+
+        <hr style={{ marginTop: 48, marginBottom: 48 }} />
+
         <Slide top duration={1300}>
           <h1
             style={{
@@ -310,6 +313,38 @@ function Countdown() {
           {seconds}
         </div>
         {secondsText}
+      </div>
+    </div>
+  );
+}
+
+function Reviews() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <div>
+        <div className="quote-text">
+          "The most anticipated drop of the century"
+        </div>
+        <div className="quote-author">- Elong Musk</div>
+      </div>
+      <div>
+        <div className="quote-text">
+          "These NFTs will ripple the fabric of spacetime"
+        </div>
+        <div className="quote-author">- Walbert Einstein</div>
+      </div>
+      <div>
+        <div className="quote-text">
+          “There's nothing wrong with having an NFT as a friend.”
+        </div>
+        <div className="quote-author">- Bob Rozz</div>
       </div>
     </div>
   );

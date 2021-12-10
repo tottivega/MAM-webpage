@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import ReactGA from "react-ga";
 import "./App.css";
 import Header from "./Components/Header";
@@ -7,29 +7,32 @@ import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Tutorials from "./Components/Tutorials";
 import Loteria from "./Components/Loteria";
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-
+import TutorialWrapper from "./Components/TutorialWrapper";
+function App() {
+  const [navigation, setNavigation] = useState("");
+  useEffect(() => {
     ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
-  }
+  }, []);
 
-  render() {
+  if (navigation)
     return (
-      <div className="App">
-        <Header />
-        <About />
-        {false && <Loteria />}
-        <Resume />
-        {false && <Tutorials />}
-        {/* <Contact /> */}
-        <Footer />
-      </div>
+      <TutorialWrapper
+        navigation={navigation}
+        navigate={(route) => setNavigation(route)}
+      />
     );
-  }
+
+  return (
+    <div className="App">
+      <Header />
+      <About />
+      {false && <Loteria />}
+      <Resume />
+      {true && <Tutorials navigate={(route) => setNavigation(route)} />}
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

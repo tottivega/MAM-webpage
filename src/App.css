@@ -1,18 +1,8 @@
-@import url(//db.onlinewebfonts.com/c/d6233b581273bc3613330b732ef61dba?family=Robot+Z);
-
 @font-face {
-  font-family: "Robot Z";
-  src: url("//db.onlinewebfonts.com/t/d6233b581273bc3613330b732ef61dba.eot");
-  src: url("//db.onlinewebfonts.com/t/d6233b581273bc3613330b732ef61dba.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/d6233b581273bc3613330b732ef61dba.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/d6233b581273bc3613330b732ef61dba.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/d6233b581273bc3613330b732ef61dba.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/d6233b581273bc3613330b732ef61dba.svg#Robot Z")
-      format("svg");
+  font-family: "AvantGardeGothic";
+  src: local("AvantGardeGothic"),
+    url("./fonts/itc-avant-garde-gothic-lt-extra-light.ttf") format("truetype");
+  font-weight: 2000;
 }
 
 body {
@@ -22,8 +12,8 @@ body {
 .title-responsive-font {
   font-size: 90px;
   bottom: 24px;
-  font-family: "Robot Z";
-  letter-spacing: 2px;
+  font-family: "AvantGardeGothic";
+  /* letter-spacing: 2px; */
   text-align: center;
 }
 
@@ -69,4 +59,45 @@ body {
   .collection-name-responsive {
     font-size: 36px !important;
   }
+}
+
+.Tutorial {
+  color: white;
+}
+
+.Tutorial .backhome {
+  cursor: pointer;
+  margin: 20px;
+  color: #9ef4f7;
+}
+
+.Tutorial .tutorial-h1 {
+  color: white;
+  font-size: 40px;
+  margin: 16px;
+}
+
+.Tutorial h2 {
+  color: white;
+  font-size: 20px;
+  margin-left: 32px;
+}
+
+.Tutorial h3 {
+  color: white;
+  margin-left: 40px;
+  margin-top: 24px;
+}
+
+.Tutorial .tutorial-div {
+  padding-left: 48px;
+  margin-bottom: 12px;
+}
+
+.Tutorial a {
+  cursor: pointer;
+}
+
+.Tutorial .tutorial-span {
+  color: rgb(255, 206, 71);
 }

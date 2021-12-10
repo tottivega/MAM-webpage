@@ -1,50 +1,62 @@
-import React, { Component } from "react";
+import React from "react";
 import Zmage from "react-zmage";
 import Fade from "react-reveal";
 
-class Tutorials extends Component {
-  render() {
-    return (
-      <section id="portfolio">
-        <Fade left duration={1000} distance="40px">
-          <div className="row">
-            <div className="twelve columns collapsed">
-              <h1>New to crypto? Don't know how to participate?</h1>
+function Tutorials({ navigate }) {
+  return (
+    <section id="portfolio">
+      <Fade left duration={1000} distance="40px">
+        <div className="row">
+          <div className="twelve columns collapsed">
+            <h1>New to crypto? Don't know how to participate?</h1>
 
+            <div
+              id="portfolio-wrapper"
+              className="bgrid-quarters s-bgrid-thirds cf"
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
               <div
-                id="portfolio-wrapper"
-                className="bgrid-quarters s-bgrid-thirds cf"
+                className="columns portfolio-item"
+                onClick={() => navigate("wallet")}
               >
-                <div className="columns portfolio-item">
-                  <div className="item-wrap">
-                    <Zmage
-                      alt="Create a Cryptowallet"
-                      src="http://la-candelaria.com/wp-content/uploads/2015/05/tutorial.jpg"
-                    />
-                    <div style={{ textAlign: "center" }}>
-                      Create a Cryptowallet
-                    </div>
+                <div className="item-wrap">
+                  <Zmage
+                    alt="Create your wallet / get Tezos"
+                    src="http://la-candelaria.com/wp-content/uploads/2015/05/tutorial.jpg"
+                    style={{ height: 200 }}
+                  />
+                  <div style={{ textAlign: "center" }}>
+                    Create your wallet / get Tezos
                   </div>
                 </div>
+              </div>
 
-                <div className="columns portfolio-item">
-                  <div className="item-wrap">
-                    <Zmage
-                      alt="Buy an NFT in Opensea"
-                      src="https://www.finder.com/niche-builder/611f92c51f96f.png"
-                    />
-                    <div style={{ textAlign: "center" }}>
-                      Buy an NFT in Opensea
-                    </div>
+              <div className="flex-break-responsive" />
+              <div
+                className="columns portfolio-item"
+                onClick={() => navigate("bid")}
+              >
+                <div className="item-wrap">
+                  <Zmage
+                    alt="Place a bid on an NFT"
+                    src="https://pbs.twimg.com/profile_images/1457736496631406593/Oad1Zm7Y_400x400.png"
+                    style={{ height: 200, width: 300 }}
+                  />
+                  <div style={{ textAlign: "center" }}>
+                    Place a bid on an NFT
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </Fade>
-      </section>
-    );
-  }
+        </div>
+      </Fade>
+    </section>
+  );
 }
 
 export default Tutorials;

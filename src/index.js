@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "./fonts/itc-avant-garde-gothic-lt-extra-light.ttf";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

@@ -153,7 +153,7 @@ const artists = [
       { award: "Co-creator of Corona Sound Machine" },
       { award: "Participated in East London University's '#4.5A&SM'" },
     ],
-    bio: "A daring colombian who found her place in the heart Mexico City. She is pure artistic talent, governing all landscapes from painting, sculptures, music to digital illustrations. You will not want to be caught watching from the sideline as Glenda reaches for the moon.",
+    bio: "A daring colombian who found her place in the heart Mexico City. She is pure artistic talent, governing all landscapes from painting, sculptures, music to illustrations. You will not want to be caught watching from the sideline as Glenda reaches for the moon.",
   },
   {
     name: "Cris Altamirano",

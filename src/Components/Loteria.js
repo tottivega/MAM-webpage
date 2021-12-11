@@ -36,16 +36,46 @@ const LoteriaGrid = () => {
 
   useEffect(() => {
     const getNfts = async () => {
-      let queryIds = "";
-      nftIds.forEach((nftId) => (queryIds += `token_ids=${nftId}&`));
-      const res = await fetch(
-        "https://api.opensea.io/api/v1/assets?" +
-          `asset_contract_address=${contractAddress}&` +
-          queryIds
-      );
+      const body = JSON.stringify({
+        query: `{
+        token(where: {creator: {address: {_eq: "tz1T8thQvCWt21upiDU3nFbuRMtvcGMgURud"}}}) {
+          id
+          description
+          highest_bid
+          title
+          display_uri
+          artifact_uri
+          thumbnail_uri
+          token_holders {
+            holder_id
+          }
+        }
+      }
+      `,
+      });
+      const res = await fetch("https://data.objkt.com/v1/graphql", {
+        method: "POST",
+        body,
+      });
 
       const data = await res.json();
-      if (data?.assets) setNftData(data.assets);
+      if (!data || !data.data.token) return;
+      const nftData = data.data.token.map((nft) => {
+        return {
+          highest_bid: nft.highest_bid,
+          id: nft.id,
+          title: nft.title,
+          permalink:
+            "https://objkt.com/asset/KT19A7Y3vMDQCLNBMdT97f8jcw3yvg5RY6o8/" +
+            nft.id,
+          thumbnail:
+            "https://cloudflare-ipfs.com/ipfs/" +
+            nft.thumbnail_uri.split("/")[2],
+          // If holder id === "tz1T8thQvCWt21upiDU3nFbuRMtvcGMgURud" owner none
+        };
+      });
+      console.log(nftData);
+      setNftData(nftData);
     };
 
     getNfts();
@@ -80,20 +110,16 @@ const LoteriaGrid = () => {
                   color: "white",
                 }}
               >
-                {nft.name}
+                {nft.title}
               </span>
               <div style={{ marginTop: 64 }}>
                 <img
-                  src={
-                    nft.image_thumbnail_url ||
-                    nft.image_url ||
-                    nft.image_original_url
-                  }
+                  src={nft.thumbnail}
                   style={{ objectFit: "contain" }}
-                  alt={nft.name}
+                  alt={nft.title}
                 />
               </div>
-              {nft.owner.address !==
+              {/* {nft.owner.address !==
                 "0x0000000000000000000000000000000000000000" && (
                 <span
                   style={{
@@ -105,7 +131,7 @@ const LoteriaGrid = () => {
                 >
                   Owner: {nft.owner.user.username || nft.owner.address}
                 </span>
-              )}
+              )} */}
               <span
                 style={{
                   position: "absolute",
@@ -114,7 +140,7 @@ const LoteriaGrid = () => {
                   color: "white",
                 }}
               >
-                Top Bid: {nft.top_bid ?? "No bids yet"}
+                Top Bid: {nft.highest_bid ?? "No bids yet"}
               </span>
             </a>
           </div>
@@ -123,3 +149,56 @@ const LoteriaGrid = () => {
     </div>
   );
 };
+
+const loteria = [
+  "Llaverito",
+  "Organillero",
+  "La nieve",
+  "Picza",
+  "Caretas",
+  "Alarma",
+  "La Cajita",
+  "Los ninos",
+  "La Danza",
+  "Mazapanes",
+  "El Guero",
+  "El predicador",
+  "El gas",
+  "Panadera",
+  "La banda",
+  "Le vengo comprando",
+  "El canto",
+  "La orquesta",
+  "Tortillas",
+  "Los esquites",
+  "Tamales",
+  "Banda",
+  "Profesor",
+  "Las tostadas",
+  "El tamal",
+  "Los churros",
+  "Agua",
+  "Juanito Lennon",
+  "Viaje Fantastico",
+  "El danzon",
+  "Pelota de Novedad",
+  "Papita Fresca",
+  "Las fresas",
+  " Las pelotas",
+  "Pajaros",
+  "Los danzantes",
+  "Los toques",
+  "Carrito",
+  "Cargador",
+  "Las frutas",
+  "Calcetas",
+  "Beatbox",
+  "La basura",
+  "Sanitarios",
+  "Tatuajes",
+  "Fierro viejo",
+  "El polizonte",
+  "Elotes y Pollos",
+  "La cantante",
+  "Lentes",
+];

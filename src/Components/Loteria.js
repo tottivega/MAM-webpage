@@ -133,7 +133,7 @@ const LoteriaGrid = () => {
 
     getNfts();
 
-    setInterval(getNfts, 1000 * 10);
+    setInterval(getNfts, 1000 * 60);
   }, []);
 
   if (!nftData)
@@ -198,7 +198,10 @@ function LoteriaNft({ nft, index }) {
           flexDirection: "column",
         }}
       >
-        <span
+        <a
+          href={nft.permalink}
+          target="_blank"
+          rel="noreferrer"
           style={{
             color: "white",
             fontSize: 28,
@@ -207,8 +210,18 @@ function LoteriaNft({ nft, index }) {
             marginTop: 28,
           }}
         >
-          {nft.title}
-        </span>
+          <span
+            style={{
+              color: "white",
+              fontSize: 28,
+              textAlign: "center",
+              fontWeight: "bold",
+              marginTop: 28,
+            }}
+          >
+            {nft.title}
+          </span>
+        </a>
         <span
           style={{
             color: "#f3db97",

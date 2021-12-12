@@ -125,7 +125,6 @@ const LoteriaGrid = () => {
             // If holder id === "tz1T8thQvCWt21upiDU3nFbuRMtvcGMgURud" owner none
           });
         });
-        console.log(nftData);
         setNftData(nftData);
       } catch (e) {
         setNftData([]);

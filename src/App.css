@@ -65,6 +65,17 @@ body {
   text-align: right;
 }
 
+.responsive-loteria-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 48px;
+  padding: 20px;
+}
+
+.hide-on-desktop {
+  display: none;
+}
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .title-responsive-font {
     font-size: 34px;
@@ -107,6 +118,14 @@ body {
     font-size: 16px;
     padding-right: 12px;
     margin-top: 0;
+  }
+
+  .responsive-loteria-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hide-on-desktop {
+    display: block;
   }
 }
 

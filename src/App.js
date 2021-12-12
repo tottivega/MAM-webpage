@@ -26,8 +26,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <About />
-      {false && <Loteria />}
+      {/* <About /> */}
+      {true && <Loteria />}
       <Resume />
       {true && <Tutorials navigate={(route) => setNavigation(route)} />}
       <Footer />

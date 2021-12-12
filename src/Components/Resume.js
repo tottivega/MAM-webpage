@@ -14,7 +14,7 @@ class Resume extends Component {
   render() {
     return (
       <section id="resume">
-        <h1
+        {/* <h1
           style={{
             width: "100%",
             textAlign: "center",
@@ -26,22 +26,22 @@ class Resume extends Component {
 
         <Reviews />
 
-        <hr style={{ marginTop: 48, marginBottom: 48 }} />
+        <hr style={{ marginTop: 48, marginBottom: 48 }} /> */}
 
         <Slide top duration={1300}>
           <h1
             style={{
               width: "100%",
               textAlign: "center",
-              fontSize: 24,
-              marginBottom: 24,
+              fontSize: 48,
+              marginBottom: 48,
               lineHeight: 1,
             }}
             className="meet-artists-responsive"
           >
             Meet the artists
           </h1>
-          <h1
+          {/* <h1
             style={{
               width: "100%",
               textAlign: "center",
@@ -52,7 +52,7 @@ class Resume extends Component {
             className="collection-name-responsive"
           >
             the Sounds of Mexico
-          </h1>
+          </h1> */}
         </Slide>
         {artists.map((artist, i) => (
           <Artist {...artist} key={i} />

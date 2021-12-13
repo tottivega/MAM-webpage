@@ -269,7 +269,7 @@ const loteria = [
   { name: "Alarma", id: "7", artist: "Cris Altamirano" },
   { name: "La Cajita", id: "49", artist: "Paco Calderon" },
   { name: "Los ninos", id: "37", artist: "Manuel Macias" },
-  { name: "El conchero", id: "60", artist: "Boris Vinski" },
+  { name: "El conchero", id: "60", artist: "Boris Viskin" },
   { name: "Mazapanes", id: "55", artist: "Cris Altamirano" },
   { name: "El Guero", id: "10", artist: "Glenda Torrado" },
   { name: "El predicador", id: "24", artist: "Boris Viskin" },

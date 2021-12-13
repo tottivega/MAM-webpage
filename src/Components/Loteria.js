@@ -85,6 +85,10 @@ const LoteriaGrid = () => {
           token_holders {
             holder_id
           }
+          english_auctions {
+            status
+            highest_bid
+          }
         }
       }
       `,
@@ -107,9 +111,7 @@ const LoteriaGrid = () => {
           );
           if (!loteriaNft) return;
           nftData.push({
-            highest_bid: loteriaNft.highest_bid
-              ? loteriaNft.highest_bid / 1000000
-              : null,
+            highest_bid: getHighestBid(loteriaNft),
             id: loteriaNft.id,
             title: loteriaNft.title,
             artist: lotNft.artist,
@@ -312,3 +314,15 @@ const loteria = [
   { name: "La cantante", id: "17", artist: "Cris Altamirano" },
   { name: "Lentes", id: "50", artist: "Paco Calderon" },
 ];
+
+function getHighestBid(nft) {
+  let highestBid = null;
+
+  const auction = nft.english_auctions.find(
+    (auction) => auction.status === "active"
+  );
+  if (auction) highestBid = auction.highest_bid;
+  if (!highestBid) highestBid = nft.highest_bid;
+
+  return highestBid ? highestBid / 1000000 : null;
+}

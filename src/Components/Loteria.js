@@ -161,15 +161,22 @@ function LoteriaNft({ nft, index }) {
   return (
     <div
       style={{
-        minHeight: 400,
+        minHeight: 500,
         position: "relative",
         alignContent: "center",
         border: "1px solid #ffffff6e",
+        borderRadius: 4,
       }}
     >
       <a href={nft.permalink} target="_blank" rel="noreferrer">
         <div
-          style={{ width: "100%", display: "flex", justifyContent: "center" }}
+          style={{
+            width: "100%",
+            height: "60%",
+            display: "flex",
+            justifyContent: "center",
+            marginTop: 12,
+          }}
         >
           <img
             src={nft.thumbnail}
@@ -198,6 +205,8 @@ function LoteriaNft({ nft, index }) {
           display: "flex",
           alignItems: "left",
           flexDirection: "column",
+          height: "40%",
+          position: "relative",
         }}
       >
         <a
@@ -252,7 +261,9 @@ function LoteriaNft({ nft, index }) {
           style={{
             color: "white",
             fontSize: 12,
-            marginLeft: 12,
+            left: 12,
+            bottom: 12,
+            position: "absolute",
           }}
         >
           Top Bid: {nft.highest_bid ? `${nft.highest_bid} Tezos` : "--"}

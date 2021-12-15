@@ -50,6 +50,7 @@ class Loteria extends Component {
                     style={{
                       fontSize: 48,
                       padding: 48,
+                      lineHeight: 1,
                     }}
                   >
                     See the Auction
@@ -60,7 +61,6 @@ class Loteria extends Component {
                 style={{
                   width: "100%",
                   textAlign: "center",
-                  marginTop: -48,
                   marginBottom: 120,
                 }}
                 className="hide-on-desktop"

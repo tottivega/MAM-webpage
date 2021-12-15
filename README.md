@@ -9,6 +9,11 @@
 - [] Create excel payment splitter
 - [] https://tezostaquito.io/docs/batch_api/ To pay our artists
 
+- [] link to tutorial
+- [] boton to auction
+- [] font like instagram
+- [] about with tezos and objkt logos
+
 ### 2. Run the project
 
 ```shell

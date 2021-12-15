@@ -19,6 +19,13 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "Bellfort Bold";
+  src: local("Bellfort Bold"),
+    url("./fonts/Bellfort Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
 body {
   background-color: #000524;
 }
@@ -39,14 +46,14 @@ body::-webkit-scrollbar-thumb {
 .title-responsive-font {
   font-size: 90px;
   bottom: 24px;
-  font-family: "JMHTypeWriter";
-  /* letter-spacing: 2px; */
+  font-family: "Bellfort Bold";
+  letter-spacing: 2px;
   text-align: center;
 }
 
 .subtitle-responsive-font {
   bottom: 48px;
-  font-family: "JMHTypeWriter";
+  font-family: "Bellfort Bold";
 }
 
 .logo-container-responsive-size {

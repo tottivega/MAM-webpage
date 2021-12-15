@@ -19,17 +19,19 @@ function App() {
     return (
       <TutorialWrapper
         navigation={navigation}
-        navigate={(route) => setNavigation(route)}
+        navigate={(route) => {
+          setNavigation(route);
+        }}
       />
     );
 
   return (
     <div className="App">
       <Header />
-      {/* <About /> */}
+      <About />
+      {true && <Tutorials navigate={(route) => setNavigation(route)} />}
       {true && <Loteria />}
       <Resume />
-      {true && <Tutorials navigate={(route) => setNavigation(route)} />}
       <Footer />
     </div>
   );

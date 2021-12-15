@@ -8,7 +8,9 @@ function Tutorials({ navigate }) {
       <Fade left duration={1000} distance="40px">
         <div className="row">
           <div className="twelve columns collapsed">
-            <h1>New to crypto? Don't know how to participate?</h1>
+            <h1 style={{ fontSize: 40, lineHeight: 1, color: "black" }}>
+              How to participate in the auction
+            </h1>
 
             <div
               id="portfolio-wrapper"
@@ -29,7 +31,14 @@ function Tutorials({ navigate }) {
                     src="http://la-candelaria.com/wp-content/uploads/2015/05/tutorial.jpg"
                     style={{ height: 200 }}
                   />
-                  <div style={{ textAlign: "center" }}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      fontSize: 24,
+                      color: "black",
+                      textAlign: "center",
+                    }}
+                  >
                     Create your wallet / get Tezos
                   </div>
                 </div>
@@ -46,7 +55,14 @@ function Tutorials({ navigate }) {
                     src="https://pbs.twimg.com/profile_images/1457736496631406593/Oad1Zm7Y_400x400.png"
                     style={{ height: 200, width: 300 }}
                   />
-                  <div style={{ textAlign: "center" }}>
+                  <div
+                    style={{
+                      textAlign: "center",
+                      fontSize: 24,
+                      color: "black",
+                      textAlign: "center",
+                    }}
+                  >
                     Place a bid on an NFT
                   </div>
                 </div>

@@ -38,8 +38,24 @@ class Loteria extends Component {
                   marginBottom: 48,
                 }}
               >
-                Loteria{" "}
+                Loteria
               </h1>
+              <div style={{ textAlign: "center" }}>
+                <a
+                  href="https://objkt.com/collection/KT19A7Y3vMDQCLNBMdT97f8jcw3yvg5RY6o8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button
+                    style={{
+                      fontSize: 48,
+                      padding: 48,
+                    }}
+                  >
+                    See the Auction
+                  </button>
+                </a>
+              </div>
               <div
                 style={{
                   width: "100%",

@@ -71,7 +71,7 @@ class Loteria extends Component {
             </Fade>
             <LoteriaGrid />
 
-            {false && <Rewards />}
+            {true && <Rewards />}
           </div>
         </div>
       </div>
